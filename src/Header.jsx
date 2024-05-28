@@ -1,12 +1,17 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Header = () => {
   return (
     <>
-    <container className="container">
-    <header className='header'>掲示板</header>
-    <p>スレッドを立てる</p>
-    </container>
+      <div className="container">
+        <header className='header'>掲示板</header>
+        <p>
+          <Link to="/threads">
+            スレッドを立てる
+          </Link>
+        </p>
+      </div>
     </>
   )
 }
