@@ -1,22 +1,7 @@
-import React, { useEffect, useState } from 'react'
+
 import "./ThreadList.css"
 
-const ThreadList = () => {
-    const [threads, setThreads] = useState([]);
-
-    useEffect(() => {
-        const fetchThreads = async () => {
-            try {
-                const response = await fetch("https://railway.bulletinboard.techtrain.dev/threads");
-                const data = await response.json();
-                setThreads(data);
-
-            } catch (error) {
-                console.error('error', error);
-            }
-        }
-        fetchThreads();
-    }, []);
+const ThreadList = ({threads}) => {
 
     return (
         <>

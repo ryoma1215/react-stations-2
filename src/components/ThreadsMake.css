@@ -1,0 +1,13 @@
+.title {
+    text-align: center;
+    font-size: 30px;
+    margin-top: 20px;
+}
+.inputfield {
+    margin-left: 480px;
+    margin-top: 100px;
+    height: 40px;
+    font-size: 20px;
+    padding: 10px;
+}
+
