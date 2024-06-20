@@ -1,0 +1,25 @@
+.title {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.list {
+    width: 60%;
+    border-collapse: collapse;
+    margin: auto;
+}
+
+.list th, .list td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.list th {
+    background-color: #fff;
+    text-align: left;
+}
+
+.list td {
+    text-align: left;
+}
+

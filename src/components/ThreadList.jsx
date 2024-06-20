@@ -1,4 +1,4 @@
-
+import { Link } from "react-router-dom"
 import "./ThreadList.css"
 
 const ThreadList = ({threads}) => {
@@ -10,7 +10,9 @@ const ThreadList = ({threads}) => {
                 <tbody>
                 {threads.map((thread) => (
                     <tr key={thread.id}>
-                        <td>{thread.title}</td>
+                        <td>
+                        <Link to={`/threads/${thread.id}`}>{thread.title}</Link>
+                            </td>
                     </tr>
                 ))}
                 </tbody>

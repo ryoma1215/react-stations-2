@@ -1,9 +1,10 @@
 import Header from "./Header.jsx";
 import "./App.css"
-import { BrowserRouter,Link,Route,Routes } from "react-router-dom";
+import { BrowserRouter,Route,Routes } from "react-router-dom";
 import React, { useEffect, useState } from 'react'
 import ThreadList from "./components/ThreadList";
 import ThreadsMake from "./components/ThreadsMake.jsx";
+import PostList from "./components/PostList.jsx";
 
 function App() {
   const [threads, setThreads] = useState([]);
@@ -34,6 +35,7 @@ function App() {
       <Routes>
         <Route path="/" element={<ThreadList threads={threads}/>} />
         <Route path="/threads" element={<ThreadsMake addThreads={addThreads}/>} />
+        <Route path="/threads/:threadId" element={<PostList />} />
       </Routes>
     </div>
     </BrowserRouter>
