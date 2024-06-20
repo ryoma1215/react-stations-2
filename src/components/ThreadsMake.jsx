@@ -9,11 +9,23 @@ const ThreadsMake = ({addThreads}) => {
         setInputValue(event.target.value);
     }
 
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
-        addThreads(inputValue);
+        try {
+            const response = await fetch('https://railway.bulletinboard.techtrain.dev/threads', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ title: inputValue }),
+            });
+            const newThread = await response.json();
+            addThreads(newThread.title);
+            
+        } catch (error) {
+            console.error('Error adding thread:', error);
+        }
     }
-
 
   return (
     <>
